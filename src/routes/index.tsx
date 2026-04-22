@@ -327,7 +327,7 @@ function HeroSection() {
             <a href="mailto:apply@survivingthestandard.com" className="btn-primary" style={{ fontSize: '1.05rem', padding: '0.9rem 2.25rem', background: 'white', color: '#1a237e', fontWeight: 600 }}>
               Apply for a Scholarship
             </a>
-            <a href="mailto:Donations@survivingthestandard.com" className="btn-outline" style={{ fontSize: '1.05rem', padding: '0.9rem 2.25rem' }}>
+            <a href="https://www.zeffy.com/en-US/donation-form/surviving-the-standard-public-safety-scholarship-fund" target="_blank" rel="noopener noreferrer" className="btn-outline" style={{ fontSize: '1.05rem', padding: '0.9rem 2.25rem' }}>
               Support Our Mission
             </a>
           </div>
@@ -646,7 +646,9 @@ function DonorSection() {
                 ))}
               </ul>
               <a
-                href="mailto:Donations@survivingthestandard.com"
+                href="https://www.zeffy.com/en-US/donation-form/surviving-the-standard-public-safety-scholarship-fund"
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{
                   display: 'inline-block', textDecoration: 'none',
                   padding: '0.7rem 1.5rem', border: `1.5px solid ${tier.metal}`,
@@ -821,7 +823,7 @@ function ContactSection() {
           <a href="mailto:apply@survivingthestandard.com" className="btn-primary" style={{ background: 'white', color: 'var(--navy)', fontSize: '1.05rem', padding: '0.9rem 2.25rem', textDecoration: 'none', fontWeight: 600 }}>
             Apply for a Scholarship
           </a>
-          <a href="mailto:Donations@survivingthestandard.com" className="btn-outline" style={{ fontSize: '1.05rem', padding: '0.9rem 2.25rem', textDecoration: 'none' }}>
+          <a href="https://www.zeffy.com/en-US/donation-form/surviving-the-standard-public-safety-scholarship-fund" target="_blank" rel="noopener noreferrer" className="btn-outline" style={{ fontSize: '1.05rem', padding: '0.9rem 2.25rem', textDecoration: 'none' }}>
             Make a Donation
           </a>
           <a href="mailto:contact@survivingthestandard.com" className="btn-outline" style={{ fontSize: '1.05rem', padding: '0.9rem 2.25rem', textDecoration: 'none' }}>
@@ -865,11 +867,11 @@ function Footer() {
         </div>
         <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
           {[
-            { label: 'Apply', href: 'mailto:apply@survivingthestandard.com' },
-            { label: 'Donate', href: 'mailto:Donations@survivingthestandard.com' },
-            { label: 'Contact', href: 'mailto:contact@survivingthestandard.com' },
+            { label: 'Apply', href: 'mailto:apply@survivingthestandard.com', external: false },
+            { label: 'Donate', href: 'https://www.zeffy.com/en-US/donation-form/surviving-the-standard-public-safety-scholarship-fund', external: true },
+            { label: 'Contact', href: 'mailto:contact@survivingthestandard.com', external: false },
           ].map((l) => (
-            <a key={l.label} href={l.href} style={{ fontFamily: "'EB Garamond', serif", fontSize: '0.88rem', color: 'rgba(255,255,255,0.5)', textDecoration: 'none', transition: 'color 0.2s', letterSpacing: '0.05em' }}
+            <a key={l.label} href={l.href} {...(l.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})} style={{ fontFamily: "'EB Garamond', serif", fontSize: '0.88rem', color: 'rgba(255,255,255,0.5)', textDecoration: 'none', transition: 'color 0.2s', letterSpacing: '0.05em' }}
               onMouseEnter={(e) => { (e.target as HTMLAnchorElement).style.color = 'rgba(255,255,255,0.85)' }}
               onMouseLeave={(e) => { (e.target as HTMLAnchorElement).style.color = 'rgba(255,255,255,0.5)' }}
             >
