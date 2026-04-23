@@ -205,7 +205,7 @@ function NavBar({ onNavClick }: { onNavClick: (id: string) => void }) {
   return (
     <>
       <nav className="nav-sticky" aria-label="Main navigation">
-        <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 1.5rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '64px' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 1.5rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '84px' }}>
           {/* Logo / Name */}
           <button
             onClick={() => onNavClick('hero')}
@@ -213,12 +213,11 @@ function NavBar({ onNavClick }: { onNavClick: (id: string) => void }) {
             style={{ background: 'none', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.75rem', padding: 0 }}
           >
             <div style={{
-              width: '44px', height: '44px', borderRadius: '50%', background: 'rgba(201,168,76,0.2)',
-              border: '2px solid rgba(201,168,76,0.7)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0
+              width: '64px', height: '64px', borderRadius: '50%', background: 'rgba(201,168,76,0.25)',
+              border: '2px solid rgba(201,168,76,0.75)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0,
+              boxShadow: '0 0 18px rgba(201,168,76,0.25)'
             }}>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="rgba(201,168,76,0.3)" stroke="#c9a84c" strokeWidth="2.5" strokeLinecap="round">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-              </svg>
+              <img src="/logo.png" alt="Surviving The Standard Foundation logo" style={{ width: '48px', height: '48px', objectFit: 'contain', display: 'block' }} />
             </div>
             <span style={{ fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 900, fontSize: '1.15rem', color: 'white', whiteSpace: 'nowrap', lineHeight: 1.2, letterSpacing: '0.01em' }}>
               Surviving The Standard<br />
